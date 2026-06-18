@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify, session
-from flask.cors import flask_cors
+from flask_cors import CORS
 from models.session_manager import SessionManager
 from models.api_endpoint_manager import APIEndpointManager
 from models.operator_formatter import OperatorFormatter
@@ -11,6 +11,8 @@ from urllib.parse import quote
 
 app = Flask(__name__)
 app.secret_key = Config.SECRET_KEY
+
+CORS(app, resources={r"/api/*": {"origins": "https://ellonding109.github.io"}})
 
 # Initialize components
 
