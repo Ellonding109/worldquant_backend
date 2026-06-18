@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, session
+from flask import Flask, render_template, request, jsonify, session, flask_cors
 from models.session_manager import SessionManager
 from models.api_endpoint_manager import APIEndpointManager
 from models.operator_formatter import OperatorFormatter
