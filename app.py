@@ -21,8 +21,7 @@ dataset_formatter = DatasetFormatter()
 
 @app.route('/')
 def index():
-    """Main dashboard"""
-    return render_template('index.html')
+    return jsonify({"status": "Backend is running", "frontend_url": "https://ellonding109.github.io/worldquant_frontend"})
 
 # Session Management Routes
 @app.route('/api/sessions', methods=['GET'])
